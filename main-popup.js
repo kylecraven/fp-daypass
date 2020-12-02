@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
   // if no cookie found...
-  if (!$.cookie('day_pass_closed')) {
+  if (!$.cookie('festive_offer_closed')) {
     // ...display popup-cookie    
     $('.popup-overlay').hide();
 
@@ -15,7 +15,7 @@ $(document).ready(function() {
     // set date to be equal to 14 days from current date time
     date.setTime(date.getTime() + 28 * 24 * 60 * 60 * 1000);
     // create cookie on click to expire on newly defined date
-    $('.popup-close').click(function() {
+    $('.festive-offer-close').click(function() {
       $.cookie('day_pass_closed', true, { expires: date });
       $('body').css('overflow', 'auto');
     });
